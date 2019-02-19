@@ -1,4 +1,60 @@
 %!TEX root = ../main.tex
-\chapter{Methodology}
-\label{chap:methodology}
+\chapter{Requirements \& Analysis}
+\label{req_analysis}
+\section{Overview}
+Requirements are essential to software development, they define the property and the functionality of the software. This chapter looks at the requirement elicitation and method used for prioritisation of the requirements. It also mentions what are the main issue faced during an android app development.
+
+\section{Requirement \& Analysis}
+Since this thesis has no client (stakeholder) to gather requirements from, the main objective of this projects was to solve a problem the author recognized, in the Bournemouth University, refer  to section \ref{prob_def}. Requirement was mainly defined based on observation and thorough research. Similar applications on the market (refer to section \ref{similar_app}) were studied and from the result requirement were derived. In addition requirements gathered was discussed into detail with the project supervisor.
+
+The beginning of the project was mainly spent observing how events and activities are organized on campus, trying to gain more knowledge on the method used and the effects in using such method. Thereafter further research was done on similar applications on the market, that can potentially aid in solving the issue. All of this lead to deriving the requirement needed to build the application.
+
+After gathering the requirements the Numerical Assignment(Grouping) method was used to prioritize the requirements.
+Numerical assignment is the most common  prioritization technique, this approach is based on  grouping the requirements into priority groups, the number of groups can be different but normally its three (critical, standard, optional).
+
+Listed below are the essential functional requirements of the mobile application.
+\pagebreak
+%\begin{table}
+%\begin{table}[t!]
+%	\centering
+%	\resizebox{\textwidth}{!}{\begin{tabular}{p{8cm} | p{8cm}|}	
+\begin{longtable}{| c | L{10cm} |}
+			\hline
+			Group  & Requirements \\	
+			\hline
+			Critical & The application should have a register and login screen  \\
+			\hline
+			Critical & The application should integrate a validation for email, only \newline universities email are accepted  \\
+			\hline
+			Critical & The application should provide specific information such as event location, event start and end date, description, title.  \\
+			\hline
+			Standard & The application should provide information of all attendees interested in an activity or event  \\
+			\hline
+			standard & The application should have a \say{Share} feature. This will open any interested app installed on the users phone so they can share the event with friends  \\
+			\hline
+			Standard &  The application should provide a \say{Send Email} feature. This will open any email client installed on users phone, so they can email the event host for further information regarding the event  \\
+			\hline
+			Standard   & The application should have a \say{Map Feature}. This will direct the user to the Maps application with the event location already pre entered.  \\
+			\hline
+			Standard & The application should have an \say{Add to Calendar} feature. This will open any calender application on the users phone and it will allow one to save the even on the calender creating a future reminder.  \\
+			\hline
+			Standard & The application should allow the user to choose category they are most interested in and based on that information display all types of event or activities in those categories \\
+			\hline
+			Optional &  The application should save the user login detail, so user has to login just once. \\
+			\hline
+			Standard & The application should show the location on a map directly on the screen of the app  \\
+			\hline
+%	\end{tabular}}
+	\caption{List of Requirements}
+	\label{table:req_table}
+\end{longtable}	
+%\end{table}
+\pagebreak
+
+\section{Application Vision}
+\label{app vision}
+The vision gives an idea of the functionality of the application.
+The purpose for this application is, that an individual who sees an activity or event, can get all the relevant information available on that event.  Any other user with Android devices can participate, and also see who is already participating in that particular event. In order to do so, the user has to press on the button RSVP on the app, to be added to the attendee list and this information will be available to anyone who has access to the app but to maintain privacy only the nickname(username) of the attendee is shown. The target people for this app are users with Android devices who are currently enrolled in the university of Bournemouth.
+
+The mobile app enables the user accomplish two main things: view existing event or activities that other users have created and create a new Event. To be able to add an event, the user must enter various information such as, event name, start date, start time, end date, end time, location, description, event type and an image(optional). On an extra view users can see only events based on their interest. The app offers the option to choose which category of event the user is interested in, which creates a second view with a personalized view of event recommendation based on the information provided. To be able to add an interest, the user has to go to the profile page and click on interest and then choose as many categories as they want. All information are stored to a database. If the internet connection is not enabled, the application will notify user that a connection is needed to continue, (unfortunately this feature was not included due to lack of time, it will be considered in future works). To upload the information to a database, the client must synchronize with the server, then the server will query the database. A user who wants to search through all events, can go to the menu, click on search, which allows them to search by event name. The application connects automatically with the database, and displays all events in order of date. The application provides the option to  save any upcoming events the user is going to attend and also to show any event created by the user. The app has extra features to enhance the experience of the user, such as; they can share events with friends by clicking on the share button, they can also add the event to the calender by clicking on add to calendar feature, finally the app can direct the user to the maps app, providing the location of the event. To show the direction on the map, the users device has to have a location based application or have a browser installed. User also has the opportunity to email the event host directly by clicking on the send email button on the event information.
 

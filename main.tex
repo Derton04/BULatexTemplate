@@ -16,6 +16,11 @@
 \usepackage{tikz}
 \usepackage{helvet}
 \usepackage{hyphenat}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage[section]{placeins}
 \renewcommand{\familydefault}{\sfdefault}
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 \pagestyle{fancy}
@@ -31,8 +36,15 @@
 \footskip = 15mm
 
 \begin{document}
-
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
 \pagenumbering{roman}
+\includepdf{first_page}
 
 \vspace*{\fill}
 \begingroup
@@ -45,21 +57,24 @@ Final Year Project
 
 \endgroup
 \vspace*{\fill}
-
 \chapter*{Abstract}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Events are mostly published via social media; however, the main method is by distributing flyers on campus and stand advertisement. These leaflets are disregarded as they always end up in the bin, they also lack long term impact as many may read them and discard or misplace them, ending up with nothing to remind them of the event. 
 
+Bournemouth University currently has more than 17000 students enrolled, most of these students participate and organise events every single day. Events such as seminars, talks, parties, sports etc.
 
+There is a need for an event application to help people publish events and keep track with any upcoming events.
+
+The app described and analysed in this thesis will address this need and assist event organisers or those interested in going to such event. This app will aid publishing the event on a platform where all student on faculty will have access to. The app will also provide attendees with all relevant information pertaining to the events they are interested in. 
+
+The app stores users name of all those going to the event and creates a total number of those that have accepted the event, so the organisers are able to prepare accordingly. The fact that other students viewing the event can see who is attending, if students were undecided as to whether to attend, seeing their friends are attending might convince them in going.
+
+Mobile Event apps are very common now, due to the increase of smartphones, therefore this app is very important as it provide easy access to all information that are usually required regarding an event.
+
+This thesis describes the design, implementation of an Android app with a server side and describes the structure and what methodology and language is needed. In addition, it will also describe how this app communicates with the server database through the API and any potential security risk.
+Currently this app will be for Android platform only. This app will be communicating constantly with a database server, MYSQL through an API written in PHP running on a webhost.
+
+By providing all the benefit, and useful features of the application, it should show how essential it is to have a unique mobile platform for universities where events can be posted, minimizing effort and maximizing benefit to all attendees and event planners.
 
 \chapter*{Dissertation Declaration}
 {\linespread{1.0} %The BU template dictates this to be this line spacing
@@ -76,11 +91,11 @@ I agree that this dissertation may be made available as the result of a request 
 \\ \newline
 \textbf{Signed:}
 \\
-Name: 
+Name:  Derrick Aryeetey Feehi
 \\
-Date:
+Date: 10 May 2018
 \\
-Programme: 
+Programme: BSc (Hons) Software Engineering
 }
 
 \chapter*{Original Work Declaration}
@@ -90,13 +105,20 @@ This dissertation and the project that it is based on are my own work, except wh
 \textbf{Signed:}
 
 \chapter*{Acknowledgements}
+First and foremost, to my supervisor Deniz Centinkaya, for the support and the constant feedback.
+
+I would also like to thank my incomparable aunties, Deborah Quartey and Magdalene Quartey for  being there when needed. 
+My sincere appreciation to my family who have been a major support throughout the entire project.
+
+Finally I would like to thank those people who also helped me to make the project possible; Omolola Fagbule, Joshua Tubana, Gernot Liebchen and Raian Ali.
 
 
 \tableofcontents
 
 \listoffigures
 
-\cleardoublepage
+\listoftables
+\clearpage
 \pagenumbering{arabic}
 
 \input{chapters/introduction}
@@ -109,15 +131,18 @@ This dissertation and the project that it is based on are my own work, except wh
 
 \input{chapters/chapter05}
 
-\input{chapters/Conclusion}
+\input{chapters/chapter06}
+
+\input{chapters/chapter07}
+
+\input{chapters/chapter08}
+
+\input{chapters/conclusion}
 \nocite{*} %Take this out if you don't want it to show all the references and only the ones you've referenced 
 \bibliography{references}
 
 
-
-
 \input{chapters/appendix}
-
 
 
 \end{document}
